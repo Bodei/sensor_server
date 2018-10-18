@@ -85,15 +85,6 @@ void loop()
     // Compute heat index in Celsius (isFahreheit = false)
     float hic = dht.computeHeatIndex(t, h, false);
     
-    //Conversion formula
-    //analog_value = analogRead(A1);
-    //s = (analog_value * 5.0) / 1024.0; 
-    //input_voltage = s / (r2/(r1+r2));
-    
-    //if (input_voltage < 0.1) 
-    //{
-    //    input_voltage = 0.0;
-    //}
     Serial.print("Humidity: ");
     Serial.print(h);
     Serial.print(" %\t");
