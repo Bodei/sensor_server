@@ -1,7 +1,7 @@
 from smbus import SMBus
 import time
 import requests
-
+import solarRadiation
 bus = SMBus(1)
 address = 8
 
@@ -9,7 +9,6 @@ dweetIO = "https://dweet.io/dweet/for/"
 myName = "rutgers_solar_dashboard"
 myKeyHum = "Humidity"
 myKeyTemp = "&Temperature"
-
 def readLong():
     block = bus.read_i2c_block_data(address,0)
     list_char1 = [chr(i) for i in block[0:6]]
