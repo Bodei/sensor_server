@@ -16,12 +16,12 @@ char humidityI2C[15], temperatureI2C[15], currentI2C[15];
 void setup()
 {
     Serial.begin(115200);     //  opens serial port, sets data rate to 9600 bps
-    Wire.setClock(400000);  // Set i2c speed
-    Wire.begin(8);          // Channel for DHT22
-                            // Channel for Current Sensor
+    Wire.setClock(400000);    // Set i2c speed
+    Wire.begin(8);            // Channel for DHT22
+                              // Channel for Current Sensor
     Wire.onRequest(requestEvent);
     dht.begin();
-    delay(2000);            // Delay to let everything connect
+    delay(2000);              // Delay to let everything connect
     uint32_t currentFrequency;
     // Initialize the INA219.
     // By default the initialization will use the largest range (32V, 2A).  However
